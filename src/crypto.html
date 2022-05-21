@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+button{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+}
+.p{
+    font-size: large;
+}
+.head{
+    text-align: center;
+}
+</style>
+</head>
+<script>
+    function func1(){
+        return "name : BITCOIN \n Price: 5500 \n ";
+    }
+
+    function func2(){
+        return "name : ETHEREUM \n Price: 5500 \n";
+    }
+
+    function func3(){
+        return "name : DOGECOIN \n Price: 5500 \n";
+    }
+
+    function func4(){
+        return "name : SOLANA \n Price: 5500 \n ";
+    }
+</script>
+<body>
+    
+<div class="split left">
+    <h1 class="head">Available Currrencies</h1>
+  <div class="centered">
+    
+    <button onclick="document.getElementById('demo').innerHTML = func1()">BITCOIN</button> <br>
+    <button onclick="document.getElementById('demo').innerHTML = func2()">ETHEREUM</button> <br>
+    <button onclick="document.getElementById('demo').innerHTML = func3()">DOGECOIN</button><br>
+    <button onclick="document.getElementById('demo').innerHTML = func4()">SOLANA</button><br>
+  </div>
+</div>
+
+<div class="split right">
+    <h1 class="head">Information</h1>
+  <div class="centered">
+    <p class="p" id="demo"></p>
+  </div>
+</div>
+     
+</body>
+</html> 
